@@ -3,20 +3,20 @@ import {formatearFecha} from '../helpers'
 
 export interface Props {
     titulo:string;
-    publisheAt:string;
+    publishedAt:string;
     contenido:string;
     imagen:string;
     url:string;
 }
 
-const {titulo,publisheAt,contenido,imagen, url} =Astro.props
+const {titulo,publishedAt,contenido,imagen, url} =Astro.props
 ---
 
 <article>
     <img src={imagen} alt = {`Imagen blog ${titulo}`}
     <div class="contenido">
         <h3>{titulo}</h3>
-        <p class="fecha">{formatearFecha(publisheAt)}</p>
+        <p class="fecha">{formatearFecha(publishedAt)}</p>
         <p class="resumen">{contenido}</p>
         <a href={`/blog/${url}`} class="enlace">Leer Post </a>
     </div>

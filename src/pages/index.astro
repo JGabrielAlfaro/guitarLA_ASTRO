@@ -46,7 +46,7 @@ const [{data:guitarras},{data:posts},{data:curso}] = await Promise.all([resGuita
 			{posts?.map (post => (
 				<Post
 					titulo={post.attributes.titulo}
-					publisheAt={post.attributes.publisheAt}
+					publishedAt={post.attributes.publishedAt}
 					contenido={post.attributes.contenido}
 					imagen={post.attributes.imagen.data.attributes.formats.medium.url}
 					url={post.attributes.url}
